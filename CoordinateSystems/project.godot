@@ -12,8 +12,13 @@ config_version=5
 
 config/name="Coordinate Systems"
 config/tags=PackedStringArray("2d", "test")
+run/main_scene="uid://b3aw8x0686vsw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Events="*res://autoload/events.gd"
 
 [debug]
 
@@ -22,3 +27,9 @@ gdscript/warnings/unsafe_property_access=1
 gdscript/warnings/unsafe_method_access=1
 gdscript/warnings/unsafe_cast=1
 gdscript/warnings/unsafe_call_argument=1
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
