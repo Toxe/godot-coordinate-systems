@@ -1,25 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4acg3uptu08i"]
+[gd_scene format=3 uid="uid://c4acg3uptu08i"]
 
 [ext_resource type="Script" uid="uid://1jsw301ecqdb" path="res://scenes/blackboard.gd" id="1_i3d2x"]
 
-[node name="Blackboard" type="ColorRect"]
+[node name="Blackboard" type="ColorRect" unique_id=1287240771]
 clip_contents = true
 offset_right = 100.0
 offset_bottom = 100.0
 color = Color(0.22468486, 0.40735555, 0.3653948, 1)
 script = ExtResource("1_i3d2x")
 
-[node name="Line2D_X" type="Line2D" parent="."]
+[node name="Line2D_X" type="Line2D" parent="." unique_id=1275886582]
 points = PackedVector2Array(4, 2, 50, 2)
 width = 4.0
 default_color = Color(1, 0, 0, 1)
 
-[node name="Line2D_Y" type="Line2D" parent="."]
+[node name="Line2D_Y" type="Line2D" parent="." unique_id=1271910296]
 points = PackedVector2Array(2, 4, 2, 50)
 width = 4.0
 default_color = Color(0, 1, 0, 1)
 
-[node name="CoordsLabel" type="Label" parent="."]
+[node name="CoordsLabel" type="Label" parent="." unique_id=120862772]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -35,7 +35,7 @@ theme_override_font_sizes/font_size = 20
 text = "0/0"
 horizontal_alignment = 1
 
-[node name="InfoLabel" type="Label" parent="."]
+[node name="InfoLabel" type="Label" parent="." unique_id=2019895062]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0

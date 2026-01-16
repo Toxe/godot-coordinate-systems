@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3aw8x0686vsw"]
+[gd_scene format=3 uid="uid://b3aw8x0686vsw"]
 
 [ext_resource type="Script" uid="uid://cstrdq3aumxkh" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://c4acg3uptu08i" path="res://scenes/blackboard.tscn" id="2_0wfyh"]
@@ -13,22 +13,22 @@ gradient = SubResource("Gradient_sgp6g")
 fill_to = Vector2(1, 1)
 metadata/_snap_enabled = true
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=680529626]
 script = ExtResource("1_o5qli")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=749584178]
 offset_right = 1280.0
 offset_bottom = 720.0
 texture = SubResource("GradientTexture2D_o5qli")
 metadata/_edit_lock_ = true
 
-[node name="Blackboard1" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Blackboard1" parent="." unique_id=1003986252 instance=ExtResource("2_0wfyh")]
 offset_left = 18.0
 offset_top = 18.0
 offset_right = 218.0
 offset_bottom = 218.0
 
-[node name="Blackboard4" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Blackboard4" parent="." unique_id=354571997 instance=ExtResource("2_0wfyh")]
 offset_left = 851.0
 offset_top = 274.0
 offset_right = 1051.0
@@ -36,13 +36,13 @@ offset_bottom = 474.0
 rotation = -0.5235988
 scale = Vector2(0.5, 2)
 
-[node name="Blackboard2" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Blackboard2" parent="." unique_id=32829266 instance=ExtResource("2_0wfyh")]
 offset_left = 529.0
 offset_top = 60.0
 offset_right = 1029.0
 offset_bottom = 140.0
 
-[node name="Blackboard3" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Blackboard3" parent="." unique_id=1149315651 instance=ExtResource("2_0wfyh")]
 offset_left = 342.0
 offset_top = 608.0
 offset_right = 542.0
@@ -50,7 +50,7 @@ offset_bottom = 808.0
 rotation = -1.5707964
 scale = Vector2(2, 2)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22118533]
 
-[node name="MouseOverlay" parent="CanvasLayer" instance=ExtResource("3_sugp2")]
+[node name="MouseOverlay" parent="CanvasLayer" unique_id=2060645405 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
