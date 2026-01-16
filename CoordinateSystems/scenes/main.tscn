@@ -23,32 +23,32 @@ texture = SubResource("GradientTexture2D_o5qli")
 metadata/_edit_lock_ = true
 
 [node name="Blackboard1" parent="." unique_id=1003986252 instance=ExtResource("2_0wfyh")]
-offset_left = 18.0
-offset_top = 18.0
-offset_right = 218.0
-offset_bottom = 218.0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 223.0
+offset_bottom = 223.0
 
 [node name="Blackboard4" parent="." unique_id=354571997 instance=ExtResource("2_0wfyh")]
-offset_left = 851.0
-offset_top = 274.0
-offset_right = 1051.0
-offset_bottom = 474.0
-rotation = -0.5235988
-scale = Vector2(0.5, 2)
+offset_left = 342.00003
+offset_top = 23.999992
+offset_right = 542.0
+offset_bottom = 224.0
+rotation = 1.0471976
+scale = Vector2(2, 0.5)
 
 [node name="Blackboard2" parent="." unique_id=32829266 instance=ExtResource("2_0wfyh")]
-offset_left = 529.0
-offset_top = 60.0
-offset_right = 1029.0
-offset_bottom = 140.0
+offset_left = 24.0
+offset_top = 601.0
+offset_right = 524.0
+offset_bottom = 681.0
 
 [node name="Blackboard3" parent="." unique_id=1149315651 instance=ExtResource("2_0wfyh")]
-offset_left = 342.0
-offset_top = 608.0
-offset_right = 542.0
-offset_bottom = 808.0
+offset_left = 39.000004
+offset_top = 569.0
+offset_right = 139.0
+offset_bottom = 669.0
 rotation = -1.5707964
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22118533]
 
