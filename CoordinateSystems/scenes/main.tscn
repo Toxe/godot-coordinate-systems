@@ -54,3 +54,39 @@ scale = Vector2(3, 3)
 
 [node name="MouseOverlay" parent="CanvasLayer" unique_id=2060645405 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1119877746]
+texture_filter = 1
+offset_left = 862.0
+offset_top = 16.0
+offset_right = 1262.0
+offset_bottom = 336.0
+stretch = true
+stretch_shrink = 4
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1109369972]
+size = Vector2i(100, 80)
+
+[node name="Blackboard5" parent="SubViewportContainer/SubViewport" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=549301521]
+offset_left = 602.0
+offset_top = 26.0
+offset_right = 832.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SubViewportContainer:
+	- 400×320, Stretch Shrink: 4
+	SubViewport:
+		- 100×80
+		Blackboard:
+			- 100×80"
+tab_stops = PackedFloat32Array(20, 20)
