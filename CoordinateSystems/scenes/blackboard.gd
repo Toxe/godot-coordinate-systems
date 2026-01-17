@@ -1,6 +1,6 @@
 class_name Blackboard extends Control
 
-var points: PackedVector2Array
+var dots: PackedVector2Array
 
 @onready var coords_label: Label = $CoordsLabel
 @onready var info_label: Label = $InfoLabel
@@ -29,5 +29,5 @@ func _on_gui_input(event: InputEvent) -> void:
 
 
 func _draw() -> void:
-    if points.size() >= 2:
-        draw_polyline(points, Color.WHEAT, 5)
+    for dot in dots:
+        draw_circle(dot, 5, Color.WHEAT, true)
