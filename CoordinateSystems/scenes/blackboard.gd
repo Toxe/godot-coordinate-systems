@@ -15,16 +15,16 @@ func _on_mouse_exited() -> void:
     coords_label.visible = false
 
 
-func _on_gui_input(event: InputEvent) -> void:
-    var mouse_motion_event: InputEventMouseMotion = event as InputEventMouseMotion
-    if mouse_motion_event:
-        coords_label.text = Format.format_position(mouse_motion_event.position)
+func _gui_input(event: InputEvent) -> void:
+    var mouse_event: InputEventMouse= event as InputEventMouse
+    if mouse_event:
+        coords_label.text = Format.format_position(mouse_event.position)
         coords_label.visible = true
-        Events.mouse_moved.emit(self, mouse_motion_event.position, get_global_transform() * mouse_motion_event.position)
+        Events.mouse_moved.emit(self, mouse_event.position)
 
-        if mouse_motion_event.button_mask == 1:
-            if get_global_rect().has_point(mouse_motion_event.global_position):
-                points.append(mouse_motion_event.position)
+        if mouse_event.button_mask == 1:
+            if get_global_rect().has_point(mouse_event.global_position):
+                dots.append(mouse_event.position)
                 queue_redraw()
 
 
