@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scripts/mouse_listener.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4acg3uptu08i" path="res://scenes/blackboard.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ba7js2i2f7di7" path="res://scenes/mouse_overlay.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scripts/input_forwarder.gd" id="4_jyhfs"]
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
 offsets = PackedFloat32Array(0, 0.50666666, 1)
@@ -12,6 +13,9 @@ colors = PackedColorArray(0.9999998, 0.9017564, 0.30826843, 1, 0.73555374, 0.777
 gradient = SubResource("Gradient_sgp6g")
 fill_to = Vector2(1, 1)
 metadata/_snap_enabled = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_sugp2"]
+viewport_path = NodePath("SubViewport2")
 
 [node name="Main" type="Node2D" unique_id=680529626]
 script = ExtResource("1_sugp2")
@@ -95,3 +99,42 @@ text = "SubViewportContainer:
 		Blackboard:
 			- 100×80"
 tab_stops = PackedFloat32Array(20, 20)
+
+[node name="SubViewport2" type="SubViewport" parent="." unique_id=1794869075]
+handle_input_locally = false
+size = Vector2i(200, 200)
+script = ExtResource("1_sugp2")
+
+[node name="Blackboard6" parent="SubViewport2" unique_id=965248515 instance=ExtResource("2_0wfyh")]
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="TextureRect1" type="TextureRect" parent="." unique_id=2077978146 node_paths=PackedStringArray("sub_viewport")]
+offset_left = 820.0
+offset_top = 370.0
+offset_right = 1020.0
+offset_bottom = 570.0
+texture = SubResource("ViewportTexture_sugp2")
+script = ExtResource("4_jyhfs")
+sub_viewport = NodePath("../SubViewport2")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=601265180 node_paths=PackedStringArray("sub_viewport")]
+offset_left = 1030.0
+offset_top = 370.0
+offset_right = 1230.0
+offset_bottom = 570.0
+texture = SubResource("ViewportTexture_sugp2")
+flip_h = true
+script = ExtResource("4_jyhfs")
+sub_viewport = NodePath("../SubViewport2")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=737918237 node_paths=PackedStringArray("sub_viewport")]
+offset_left = 820.0
+offset_top = 580.0
+offset_right = 1230.0
+offset_bottom = 780.0
+scale = Vector2(1, 0.5)
+texture = SubResource("ViewportTexture_sugp2")
+flip_v = true
+script = ExtResource("4_jyhfs")
+sub_viewport = NodePath("../SubViewport2")
