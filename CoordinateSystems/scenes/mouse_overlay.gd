@@ -18,6 +18,6 @@ func _on_mouse_moved(node: Node, local_position: Vector2) -> void:
     var line := "%s: %s" % [node.name, Format.format_position(local_position)]
     var canvas_item: CanvasItem = node as CanvasItem
     if canvas_item:
-        line += " → %s" % [canvas_item.get_global_transform() * local_position]
+        line += " → %s" % [Format.format_position(canvas_item.get_global_transform() * local_position)]
     lines.append(line)
     queue_redraw()
