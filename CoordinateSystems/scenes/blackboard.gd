@@ -1,4 +1,4 @@
-class_name Blackboard extends Control
+class_name Blackboard extends GUIMouseListener
 
 var dots: PackedVector2Array
 
@@ -16,11 +16,12 @@ func _on_mouse_exited() -> void:
 
 
 func _gui_input(event: InputEvent) -> void:
-    var mouse_event: InputEventMouse= event as InputEventMouse
+    super._gui_input(event) # call GUIMouseListener
+
+    var mouse_event: InputEventMouse = event as InputEventMouse
     if mouse_event:
         coords_label.text = Format.format_position(mouse_event.position)
         coords_label.visible = true
-        Events.mouse_moved.emit(self, mouse_event.position)
 
         if mouse_event.button_mask == 1:
             if get_global_rect().has_point(mouse_event.global_position):
