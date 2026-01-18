@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scenes/gui_mouse_listener.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4acg3uptu08i" path="res://scenes/blackboard.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ba7js2i2f7di7" path="res://scenes/mouse_overlay.tscn" id="3_sugp2"]
-[ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/input_forwarder.gd" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/gui_input_forwarder.gd" id="4_jyhfs"]
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
 offsets = PackedFloat32Array(0, 0.50666666, 1)

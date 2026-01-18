@@ -1,4 +1,4 @@
-class_name InputForwarder extends GUIMouseListener
+class_name GUIInputForwarder extends GUIMouseListener
 
 @export var sub_viewport: SubViewport
 
