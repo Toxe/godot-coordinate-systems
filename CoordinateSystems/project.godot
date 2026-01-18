@@ -41,3 +41,7 @@ window/stretch/mode="canvas_items"
 [gui]
 
 theme/custom="uid://cmfpnfk6hasji"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
