@@ -85,10 +85,10 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="." unique_id=549301521]
-offset_left = 602.0
-offset_top = 26.0
-offset_right = 832.0
-offset_bottom = 179.0
+offset_left = 1084.0
+offset_top = 28.0
+offset_right = 1258.0
+offset_bottom = 141.0
 text = "SubViewportContainer:
 	- 400×320, Stretch Shrink: 4
 	SubViewport:
@@ -106,18 +106,18 @@ offset_right = 200.0
 offset_bottom = 200.0
 
 [node name="TextureRect1" type="TextureRect" parent="." unique_id=2077978146 node_paths=PackedStringArray("sub_viewport")]
-offset_left = 820.0
+offset_left = 852.0
 offset_top = 370.0
-offset_right = 1020.0
+offset_right = 1052.0
 offset_bottom = 570.0
 texture = SubResource("ViewportTexture_sugp2")
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport2")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=601265180 node_paths=PackedStringArray("sub_viewport")]
-offset_left = 1030.0
+offset_left = 1062.0
 offset_top = 370.0
-offset_right = 1230.0
+offset_right = 1262.0
 offset_bottom = 570.0
 texture = SubResource("ViewportTexture_sugp2")
 flip_h = true
@@ -125,9 +125,9 @@ script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport2")
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=737918237 node_paths=PackedStringArray("sub_viewport")]
-offset_left = 820.0
+offset_left = 852.0
 offset_top = 580.0
-offset_right = 1230.0
+offset_right = 1262.0
 offset_bottom = 780.0
 scale = Vector2(1, 0.5)
 texture = SubResource("ViewportTexture_sugp2")
