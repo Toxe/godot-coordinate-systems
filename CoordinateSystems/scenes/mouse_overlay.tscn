@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://ba7js2i2f7di7"]
-
-[ext_resource type="Script" uid="uid://c0e04nsduwy4q" path="res://scenes/mouse_overlay.gd" id="1_8jydc"]
-
-[node name="MouseOverlay" type="Node2D" unique_id=1421871978]
-script = ExtResource("1_8jydc")

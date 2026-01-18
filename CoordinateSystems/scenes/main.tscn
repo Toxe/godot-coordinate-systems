@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scenes/gui_mouse_listener.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4acg3uptu08i" path="res://scenes/blackboard.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://ba7js2i2f7di7" path="res://scenes/mouse_overlay.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://c0e04nsduwy4q" path="res://scenes/mouse_overlay.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/gui_input_forwarder.gd" id="4_jyhfs"]
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
@@ -56,8 +56,8 @@ scale = Vector2(3, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22118533]
 
-[node name="MouseOverlay" parent="CanvasLayer" unique_id=2060645405 instance=ExtResource("3_sugp2")]
-unique_name_in_owner = true
+[node name="MouseOverlay" type="Node2D" parent="CanvasLayer" unique_id=2044151433]
+script = ExtResource("3_jyhfs")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1119877746]
 texture_filter = 1
