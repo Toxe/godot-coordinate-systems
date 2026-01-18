@@ -15,7 +15,7 @@ fill_to = Vector2(1, 1)
 metadata/_snap_enabled = true
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_sugp2"]
-viewport_path = NodePath("SubViewport2")
+viewport_path = NodePath("SubViewport3")
 
 [node name="Main" type="Node2D" unique_id=680529626]
 
@@ -32,14 +32,6 @@ offset_top = 23.0
 offset_right = 223.0
 offset_bottom = 223.0
 
-[node name="Blackboard4" parent="." unique_id=354571997 instance=ExtResource("2_0wfyh")]
-offset_left = 342.00003
-offset_top = 23.999992
-offset_right = 542.0
-offset_bottom = 224.0
-rotation = 1.0471976
-scale = Vector2(2, 0.5)
-
 [node name="Blackboard2" parent="." unique_id=32829266 instance=ExtResource("2_0wfyh")]
 offset_left = 24.0
 offset_top = 601.0
@@ -54,14 +46,20 @@ offset_bottom = 669.0
 rotation = -1.5707964
 scale = Vector2(3, 3)
 
+[node name="Blackboard4" parent="." unique_id=354571997 instance=ExtResource("2_0wfyh")]
+offset_left = 405.00006
+offset_top = 522.00006
+offset_right = 505.00006
+offset_bottom = 922.00006
+rotation = -0.7853982
+scale = Vector2(2, 0.5)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22118533]
 
 [node name="MouseOverlay" type="Node2D" parent="CanvasLayer" unique_id=2044151433]
 script = ExtResource("3_jyhfs")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1119877746]
-texture_filter = 1
-offset_left = 862.0
+[node name="SubViewportContainer1" type="SubViewportContainer" parent="." unique_id=1119877746]
 offset_top = 16.0
 offset_right = 1262.0
 offset_bottom = 336.0
@@ -69,13 +67,13 @@ stretch = true
 stretch_shrink = 4
 script = ExtResource("1_sugp2")
 
-[node name="SubViewport1" type="SubViewport" parent="SubViewportContainer" unique_id=1109369972]
+[node name="SubViewport1" type="SubViewport" parent="SubViewportContainer1" unique_id=1109369972]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(100, 80)
 render_target_update_mode = 4
 
-[node name="Blackboard5" parent="SubViewportContainer/SubViewport1" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard5" parent="SubViewportContainer1/SubViewport1" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -98,12 +96,12 @@ text = "SubViewportContainer:
 			- 100×80"
 tab_stops = PackedFloat32Array(20, 20)
 
-[node name="SubViewport2" type="SubViewport" parent="." unique_id=1794869075]
+[node name="SubViewport3" type="SubViewport" parent="." unique_id=1794869075]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(200, 200)
 
-[node name="Blackboard6" parent="SubViewport2" unique_id=965248515 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard7" parent="SubViewport3" unique_id=965248515 instance=ExtResource("2_0wfyh")]
 offset_right = 200.0
 offset_bottom = 200.0
 
@@ -114,7 +112,7 @@ offset_right = 1052.0
 offset_bottom = 570.0
 texture = SubResource("ViewportTexture_sugp2")
 script = ExtResource("4_jyhfs")
-sub_viewport = NodePath("../SubViewport2")
+sub_viewport = NodePath("../SubViewport3")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=601265180 node_paths=PackedStringArray("sub_viewport")]
 offset_left = 1062.0
@@ -124,7 +122,7 @@ offset_bottom = 570.0
 texture = SubResource("ViewportTexture_sugp2")
 flip_h = true
 script = ExtResource("4_jyhfs")
-sub_viewport = NodePath("../SubViewport2")
+sub_viewport = NodePath("../SubViewport3")
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=737918237 node_paths=PackedStringArray("sub_viewport")]
 offset_left = 852.0
@@ -135,4 +133,4 @@ scale = Vector2(1, 0.5)
 texture = SubResource("ViewportTexture_sugp2")
 flip_v = true
 script = ExtResource("4_jyhfs")
-sub_viewport = NodePath("../SubViewport2")
+sub_viewport = NodePath("../SubViewport3")
