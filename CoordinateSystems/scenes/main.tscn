@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3aw8x0686vsw"]
 
-[ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scripts/mouse_listener.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scenes/gui_mouse_listener.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c4acg3uptu08i" path="res://scenes/blackboard.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ba7js2i2f7di7" path="res://scenes/mouse_overlay.tscn" id="3_sugp2"]
 [ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/input_forwarder.gd" id="4_jyhfs"]
@@ -18,7 +18,6 @@ metadata/_snap_enabled = true
 viewport_path = NodePath("SubViewport2")
 
 [node name="Main" type="Node2D" unique_id=680529626]
-script = ExtResource("1_sugp2")
 
 [node name="Background" type="TextureRect" parent="." unique_id=749584178]
 offset_right = 1280.0
@@ -55,7 +54,6 @@ rotation = -1.5707964
 scale = Vector2(3, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=22118533]
-script = ExtResource("1_sugp2")
 
 [node name="MouseOverlay" parent="CanvasLayer" unique_id=2060645405 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
@@ -74,7 +72,6 @@ script = ExtResource("1_sugp2")
 handle_input_locally = false
 size = Vector2i(100, 80)
 render_target_update_mode = 4
-script = ExtResource("1_sugp2")
 
 [node name="Blackboard5" parent="SubViewportContainer/SubViewport1" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
 anchors_preset = 15
@@ -103,7 +100,6 @@ tab_stops = PackedFloat32Array(20, 20)
 [node name="SubViewport2" type="SubViewport" parent="." unique_id=1794869075]
 handle_input_locally = false
 size = Vector2i(200, 200)
-script = ExtResource("1_sugp2")
 
 [node name="Blackboard6" parent="SubViewport2" unique_id=965248515 instance=ExtResource("2_0wfyh")]
 offset_right = 200.0

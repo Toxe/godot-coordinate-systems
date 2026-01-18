@@ -1,7 +1,7 @@
-class_name MouseListener extends Node
+class_name GUIMouseListener extends Control
 
 
-func _input(event: InputEvent) -> void:
+func _gui_input(event: InputEvent) -> void:
     var mouse_motion_event: InputEventMouseMotion = event as InputEventMouseMotion
     if mouse_motion_event:
         Events.mouse_moved.emit(self, mouse_motion_event.position)
