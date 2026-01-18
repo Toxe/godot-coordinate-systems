@@ -6,11 +6,14 @@ enum LabelAlignment {
 }
 
 const font_size := 20
+const font_outline_size := 8
+
+static var project_theme := ThemeDB.get_project_theme()
 
 
-static func draw_label(canvas_item: CanvasItem, pos: Vector2, text: String, alignment: HorizontalAlignment, color: Color, label_alignment: LabelAlignment) -> void:
+static func draw_label(canvas_item: CanvasItem, pos: Vector2, text: String, alignment: HorizontalAlignment, text_color: Color, outline_color: Color, label_alignment: LabelAlignment) -> void:
     if canvas_item.visible:
-        var label_size := ThemeDB.fallback_font.get_multiline_string_size(text, alignment, -1, font_size)
+        var label_size := project_theme.default_font.get_multiline_string_size(text, alignment, -1, font_size)
         var label_rect := Rect2(pos, label_size)
         match label_alignment:
             LabelAlignment.Right:
@@ -31,9 +34,10 @@ static func draw_label(canvas_item: CanvasItem, pos: Vector2, text: String, alig
         elif label_rect.position.y < viewport_rect.position.y:
             moved_rect.position.y += viewport_rect.position.y - label_rect.position.y
 
-        canvas_item.draw_multiline_string(ThemeDB.fallback_font, moved_rect.position + Vector2(0, font_size), text, alignment, moved_rect.size.x + 1, font_size, -1, color)
+        canvas_item.draw_multiline_string_outline(project_theme.default_font, moved_rect.position + Vector2(0, font_size), text, alignment, moved_rect.size.x + 1, font_size, -1, font_outline_size, outline_color)
+        canvas_item.draw_multiline_string(project_theme.default_font, moved_rect.position + Vector2(0, font_size), text, alignment, moved_rect.size.x + 1, font_size, -1, text_color)
 
 
 static func draw_labeled_circle(canvas_item: CanvasItem, pos: Vector2, radius: float, color: Color, width: float, text: String) -> void:
     canvas_item.draw_circle(pos, radius, color, false, width)
-    draw_label(canvas_item, pos + Vector2(0, radius), text, HORIZONTAL_ALIGNMENT_RIGHT, color, LabelAlignment.Bottom)
+    draw_label(canvas_item, pos + Vector2(0, radius), text, HORIZONTAL_ALIGNMENT_RIGHT, Color.LIGHT_PINK, Color.BLACK, LabelAlignment.Bottom)
