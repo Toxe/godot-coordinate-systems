@@ -89,7 +89,6 @@ offset_left = 602.0
 offset_top = 26.0
 offset_right = 832.0
 offset_bottom = 179.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "SubViewportContainer:
 	- 400×320, Stretch Shrink: 4
 	SubViewport:
