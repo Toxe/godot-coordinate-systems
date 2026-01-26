@@ -5,8 +5,8 @@ enum LabelAlignment {
     Bottom,
 }
 
-const font_size := 20
-const font_outline_size := 8
+const font_size := 18
+const font_outline_size := 6
 
 static var project_theme := ThemeDB.get_project_theme()
 
