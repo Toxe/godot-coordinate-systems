@@ -24,9 +24,8 @@ func _gui_input(event: InputEvent) -> void:
         coords_label.visible = true
 
         if mouse_event.button_mask == 1:
-            if get_global_rect().has_point(mouse_event.global_position):
-                dots.append(mouse_event.position)
-                queue_redraw()
+            dots.append(mouse_event.position)
+            queue_redraw()
 
 
 func _draw() -> void:
