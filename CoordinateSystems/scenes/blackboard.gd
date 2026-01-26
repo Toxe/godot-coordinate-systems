@@ -8,6 +8,7 @@ var dots: PackedVector2Array
 
 func _ready() -> void:
     info_label.text = "%s\nsize: %s\nscale: %s" % [name, Format.format_size(size), Format.format_size(scale)]
+    info_label.tooltip_text = info_label.text
     coords_label.visible = false
 
 
