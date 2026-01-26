@@ -10,12 +10,12 @@ color = Color(0.22468486, 0.40735555, 0.3653948, 1)
 script = ExtResource("1_i3d2x")
 
 [node name="Line2D_X" type="Line2D" parent="." unique_id=1275886582]
-points = PackedVector2Array(4, 2, 50, 2)
+points = PackedVector2Array(4, 2, 75, 2)
 width = 4.0
 default_color = Color(1, 0, 0, 1)
 
 [node name="Line2D_Y" type="Line2D" parent="." unique_id=1271910296]
-points = PackedVector2Array(2, 4, 2, 50)
+points = PackedVector2Array(2, 4, 2, 75)
 width = 4.0
 default_color = Color(0, 1, 0, 1)
 
