@@ -35,4 +35,4 @@ func _draw() -> void:
 
 
 func _on_button_pressed() -> void:
-    print($Button)
+    ($Button/GPUParticles2D as GPUParticles2D).emit_particle(Transform2D.IDENTITY, Vector2.ZERO, Color.BLACK, Color.BLACK, 0)
