@@ -6,8 +6,7 @@
 [ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/gui_input_forwarder.gd" id="4_jyhfs"]
 
 [sub_resource type="Gradient" id="Gradient_sgp6g"]
-offsets = PackedFloat32Array(0, 0.50666666, 1)
-colors = PackedColorArray(0.9999998, 0.9017564, 0.30826843, 1, 0.73555374, 0.7777561, 1, 1, 1, 0.7758604, 0.5795827, 1)
+colors = PackedColorArray(0.61610734, 0.6690598, 1, 1, 0.9999996, 0.83634895, 0.46008295, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_o5qli"]
 gradient = SubResource("Gradient_sgp6g")
@@ -48,10 +47,10 @@ rotation = -1.5707964
 scale = Vector2(3, 3)
 
 [node name="Blackboard4" parent="." unique_id=1278775097 instance=ExtResource("2_0wfyh")]
-offset_left = 405.00006
-offset_top = 522.00006
-offset_right = 505.00006
-offset_bottom = 922.00006
+offset_left = 364.0
+offset_top = 500.0
+offset_right = 464.0
+offset_bottom = 900.0
 rotation = -0.7853982
 scale = Vector2(2, 0.5)
 
@@ -156,70 +155,56 @@ script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
 [node name="Label1" type="Label" parent="." unique_id=113031044]
-offset_left = 659.0
-offset_top = 16.0
-offset_right = 833.0
-offset_bottom = 129.0
-text = "SubViewportContainer:
-	- 400×320, Stretch Shrink: 4
-	- SubViewport:
-		- 100×80
-		- Blackboard:
-			- 100×80"
+offset_left = 647.0
+offset_top = 22.0
+offset_right = 828.0
+offset_bottom = 81.0
+text = "SubViewportContainer: 400×320
+	- Stretch Shrink: 4
+	- SubViewport: 100×80"
 tab_stops = PackedFloat32Array(20, 20)
 
 [node name="Label2" type="Label" parent="." unique_id=161700426]
-offset_left = 1093.0
-offset_top = 16.0
-offset_right = 1261.0
-offset_bottom = 129.0
-text = "SubViewportContainer:
-	- 200×160, Scale 2×2
-	- SubViewport:
-		- 200×160
-		- Blackboard:
-			- 100×80, Scale 2×2"
+offset_left = 1078.0
+offset_top = 21.0
+offset_right = 1259.0
+offset_bottom = 80.0
+text = "SubViewportContainer: 200×160
+	- Scale 2×2
+	- SubViewport: 200×160"
 tab_stops = PackedFloat32Array(20, 20)
 
 [node name="Label3" type="Label" parent="." unique_id=1411215777]
-offset_left = 758.0
+offset_left = 715.0
 offset_top = 370.0
-offset_right = 926.0
-offset_bottom = 483.0
-text = "TextureRect:
-	- 200×200
-SubViewport:
-	- 200×200
-Blackboard:
-	- 200x200"
+offset_right = 842.0
+offset_bottom = 429.0
+text = "TextureRect: 200×200
+SubViewport: 200×200
+Blackboard: 200x200"
 tab_stops = PackedFloat32Array(20, 20)
 
 [node name="Label4" type="Label" parent="." unique_id=1507417622]
-offset_left = 1175.0
-offset_top = 373.0
-offset_right = 1343.0
-offset_bottom = 522.0
-text = "TextureRect:
-	- 200×200
+offset_left = 1095.0
+offset_top = 460.0
+offset_right = 1222.0
+offset_bottom = 555.0
+text = "TextureRect: 200×200
 	- Rotation 90
 	- H Flip
-SubViewport:
-	- 200×200
-Blackboard:
-	- 200x200"
+SubViewport: 200×200
+Blackboard: 200x200"
 tab_stops = PackedFloat32Array(20, 20)
 
 [node name="Label5" type="Label" parent="." unique_id=1226042659]
-offset_left = 738.0
-offset_top = 518.0
-offset_right = 906.0
-offset_bottom = 667.0
-text = "TextureRect:
-	- 200×200, Scale 2×0.5
+offset_left = 709.0
+offset_top = 584.0
+offset_right = 836.0
+offset_bottom = 697.0
+text = "TextureRect: 200×200
+	- Scale 2×0.5
 	- H Flip
 	- V Flip
-SubViewport:
-	- 200×200
-Blackboard:
-	- 200x200"
+SubViewport: 200×200
+Blackboard: 200x200"
 tab_stops = PackedFloat32Array(20, 20)
