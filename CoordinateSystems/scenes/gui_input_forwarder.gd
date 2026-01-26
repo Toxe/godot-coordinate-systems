@@ -3,8 +3,13 @@ class_name GUIInputForwarder extends TextureRect
 @export var sub_viewport: SubViewport
 
 
-func _ready() -> void:
-    sub_viewport.notification(NOTIFICATION_VP_MOUSE_ENTER)
+func _notification(what: int) -> void:
+    # Due to a bug we need to manually send NOTIFICATION_VP_MOUSE_ENTER to the SubViewport,
+    # because otherwise we wouldn't be able to push InputEventMouseMotion events.
+    # https://github.com/godotengine/godot/issues/115265
+    match what:
+        NOTIFICATION_MOUSE_ENTER: sub_viewport.notification(NOTIFICATION_VP_MOUSE_ENTER)
+        NOTIFICATION_MOUSE_EXIT: sub_viewport.notification(NOTIFICATION_VP_MOUSE_EXIT)
 
 
 func _input(event: InputEvent) -> void:
