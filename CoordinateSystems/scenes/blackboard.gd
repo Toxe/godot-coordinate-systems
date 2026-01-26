@@ -31,3 +31,7 @@ func _gui_input(event: InputEvent) -> void:
 func _draw() -> void:
     for dot in dots:
         draw_circle(dot, 5, Color.WHEAT, true)
+
+
+func _on_button_pressed() -> void:
+    print($Button)
