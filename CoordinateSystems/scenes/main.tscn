@@ -10,6 +10,8 @@ colors = PackedColorArray(0.61610734, 0.6690598, 1, 1, 0.9999996, 0.83634895, 0.
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_o5qli"]
 gradient = SubResource("Gradient_sgp6g")
+width = 128
+height = 128
 fill_to = Vector2(1, 1)
 metadata/_snap_enabled = true
 
@@ -19,40 +21,43 @@ viewport_path = NodePath("SubViewport3")
 [node name="Main" type="Node2D" unique_id=8235168]
 
 [node name="Background" type="TextureRect" parent="." unique_id=396497303]
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_right = 1600.0
+offset_bottom = 900.0
 texture = SubResource("GradientTexture2D_o5qli")
 script = ExtResource("1_sugp2")
-metadata/_edit_lock_ = true
 
 [node name="Blackboard1" parent="." unique_id=2027896682 instance=ExtResource("2_0wfyh")]
-offset_left = 23.0
-offset_top = 23.0
-offset_right = 223.0
-offset_bottom = 223.0
+offset_left = 35.0
+offset_top = 142.4213
+offset_right = 235.0
+offset_bottom = 342.4213
+metadata/_edit_use_anchors_ = true
 
 [node name="Blackboard2" parent="." unique_id=1666201008 instance=ExtResource("2_0wfyh")]
-offset_left = 24.0
-offset_top = 601.0
-offset_right = 224.0
-offset_bottom = 801.0
+offset_left = 36.0
+offset_top = 720.42126
+offset_right = 236.0
+offset_bottom = 920.42126
 scale = Vector2(2, 0.5)
+metadata/_edit_use_anchors_ = true
 
 [node name="Blackboard3" parent="." unique_id=1031358396 instance=ExtResource("2_0wfyh")]
-offset_left = 39.000004
-offset_top = 569.0
-offset_right = 139.0
-offset_bottom = 669.0
+offset_left = 51.000004
+offset_top = 688.42126
+offset_right = 151.0
+offset_bottom = 788.42126
 rotation = -1.5707964
 scale = Vector2(3, 3)
+metadata/_edit_use_anchors_ = true
 
 [node name="Blackboard4" parent="." unique_id=1278775097 instance=ExtResource("2_0wfyh")]
-offset_left = 364.0
-offset_top = 500.0
-offset_right = 464.0
-offset_bottom = 900.0
+offset_left = 250.0
+offset_top = 258.0
+offset_right = 350.0
+offset_bottom = 658.0
 rotation = -0.7853982
 scale = Vector2(2, 0.5)
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1819731043]
 
@@ -60,10 +65,10 @@ scale = Vector2(2, 0.5)
 script = ExtResource("3_jyhfs")
 
 [node name="SubViewportContainer1" type="SubViewportContainer" parent="." unique_id=451903663]
-offset_left = 435.0
-offset_top = 16.0
-offset_right = 835.0
-offset_bottom = 336.0
+offset_left = 757.0
+offset_top = 84.0
+offset_right = 1157.0
+offset_bottom = 404.0
 stretch = true
 stretch_shrink = 4
 script = ExtResource("1_sugp2")
@@ -85,10 +90,10 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="." unique_id=897523664]
-offset_left = 863.0
-offset_top = 16.0
-offset_right = 1063.0
-offset_bottom = 176.0
+offset_left = 1185.0
+offset_top = 84.0
+offset_right = 1385.0
+offset_bottom = 244.0
 scale = Vector2(2, 2)
 stretch = true
 script = ExtResource("1_sugp2")
@@ -120,20 +125,20 @@ offset_right = 200.0
 offset_bottom = 200.0
 
 [node name="TextureRect1" type="TextureRect" parent="." unique_id=767382591 node_paths=PackedStringArray("sub_viewport")]
-offset_left = 852.0
-offset_top = 370.0
-offset_right = 1052.0
-offset_bottom = 570.0
+offset_left = 1170.0
+offset_top = 572.0
+offset_right = 1370.0
+offset_bottom = 772.0
 mouse_filter = 0
 texture = SubResource("ViewportTexture_sugp2")
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1570498070 node_paths=PackedStringArray("sub_viewport")]
-offset_left = 1262.0
-offset_top = 370.0
-offset_right = 1462.0
-offset_bottom = 570.0
+offset_left = 1580.0
+offset_top = 572.0
+offset_right = 1780.0
+offset_bottom = 772.0
 rotation = 1.5707964
 mouse_filter = 0
 texture = SubResource("ViewportTexture_sugp2")
@@ -142,10 +147,10 @@ script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=1538466976 node_paths=PackedStringArray("sub_viewport")]
-offset_left = 852.0
-offset_top = 580.0
-offset_right = 1057.0
-offset_bottom = 780.0
+offset_left = 1170.0
+offset_top = 782.0
+offset_right = 1375.0
+offset_bottom = 982.0
 scale = Vector2(2, 0.5)
 mouse_filter = 0
 texture = SubResource("ViewportTexture_sugp2")
@@ -154,57 +159,102 @@ flip_v = true
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=513767253 node_paths=PackedStringArray("sub_viewport")]
+offset_left = 955.0
+offset_top = 682.0
+offset_right = 1155.0
+offset_bottom = 882.0
+rotation = 0.7853982
+scale = Vector2(0.5, 0.5)
+mouse_filter = 0
+texture = SubResource("ViewportTexture_sugp2")
+script = ExtResource("4_jyhfs")
+sub_viewport = NodePath("../SubViewport3")
+
 [node name="Label1" type="Label" parent="." unique_id=113031044]
-offset_left = 647.0
-offset_top = 22.0
-offset_right = 828.0
-offset_bottom = 81.0
+offset_left = 932.0
+offset_top = 10.0
+offset_right = 1158.0
+offset_bottom = 84.0
 text = "SubViewportContainer: 400×320
-	- Stretch Shrink: 4
-	- SubViewport: 100×80"
-tab_stops = PackedFloat32Array(20, 20)
+- Stretch/Shrink: 4
+- SubViewport: 100×80"
 
 [node name="Label2" type="Label" parent="." unique_id=161700426]
-offset_left = 1078.0
-offset_top = 21.0
-offset_right = 1259.0
-offset_bottom = 80.0
+offset_left = 1369.0
+offset_top = 8.0
+offset_right = 1595.0
+offset_bottom = 82.0
 text = "SubViewportContainer: 200×160
-	- Scale 2×2
-	- SubViewport: 200×160"
-tab_stops = PackedFloat32Array(20, 20)
+- Scale 2×2
+- SubViewport: 200×160"
 
 [node name="Label3" type="Label" parent="." unique_id=1411215777]
-offset_left = 715.0
-offset_top = 370.0
-offset_right = 842.0
-offset_bottom = 429.0
-text = "TextureRect: 200×200
-SubViewport: 200×200
-Blackboard: 200x200"
-tab_stops = PackedFloat32Array(20, 20)
+offset_left = 1194.0
+offset_top = 535.0
+offset_right = 1343.0
+offset_bottom = 563.0
+text = "TextureRect: 200×200"
 
 [node name="Label4" type="Label" parent="." unique_id=1507417622]
-offset_left = 1095.0
-offset_top = 460.0
-offset_right = 1222.0
-offset_bottom = 555.0
+offset_left = 1427.0
+offset_top = 492.0
+offset_right = 1576.0
+offset_bottom = 566.0
 text = "TextureRect: 200×200
-	- Rotation 90
-	- H Flip
-SubViewport: 200×200
-Blackboard: 200x200"
-tab_stops = PackedFloat32Array(20, 20)
+- Rotation 90°
+- H Flip"
 
 [node name="Label5" type="Label" parent="." unique_id=1226042659]
-offset_left = 709.0
-offset_top = 584.0
-offset_right = 836.0
-offset_bottom = 697.0
+offset_left = 1015.0
+offset_top = 797.0
+offset_right = 1164.0
+offset_bottom = 894.0
+text = "TextureRect: 205×200
+- Scale 2×0.5
+- H Flip
+- V Flip"
+
+[node name="Label6" type="Label" parent="." unique_id=426603918]
+offset_left = 39.0
+offset_top = 58.0
+offset_right = 214.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Simple Controls"
+
+[node name="Label7" type="Label" parent="." unique_id=1381013410]
+offset_left = 554.0
+offset_top = 1.0
+offset_right = 817.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "SubViewports in
+SubViewportContainers"
+
+[node name="Label8" type="Label" parent="." unique_id=570167275]
+offset_left = 779.0
+offset_top = 546.0
+offset_right = 1154.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "A single 200×200 SubViewport
+rendered in multiple TextureRects"
+
+[node name="Label9" type="Label" parent="." unique_id=1677060448]
+offset_left = 788.0
+offset_top = 669.0
+offset_right = 937.0
+offset_bottom = 743.0
 text = "TextureRect: 200×200
-	- Scale 2×0.5
-	- H Flip
-	- V Flip
-SubViewport: 200×200
-Blackboard: 200x200"
-tab_stops = PackedFloat32Array(20, 20)
+- Scale 0.5×0.5
+- Rotation 45°"
+
+[node name="Line2D" type="Line2D" parent="." unique_id=649153884]
+points = PackedVector2Array(430, 0, 700, 470, 700, 900, 700, 470, 1600, 470)
+default_color = Color(0, 0, 0, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
