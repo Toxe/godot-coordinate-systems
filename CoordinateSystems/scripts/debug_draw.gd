@@ -5,7 +5,7 @@ enum LabelAlignment {
     Bottom,
 }
 
-const font_size := 18
+const font_size := 24
 const font_outline_size := 6
 
 static var project_theme := ThemeDB.get_project_theme()
@@ -40,4 +40,4 @@ static func draw_label(canvas_item: CanvasItem, pos: Vector2, text: String, alig
 
 static func draw_labeled_circle(canvas_item: CanvasItem, pos: Vector2, radius: float, color: Color, width: float, text: String) -> void:
     canvas_item.draw_circle(pos, radius, color, false, width)
-    draw_label(canvas_item, pos + Vector2(0, radius), text, HORIZONTAL_ALIGNMENT_RIGHT, Color.LIGHT_PINK, Color.BLACK, LabelAlignment.Bottom)
+    draw_label(canvas_item, pos + Vector2(0, radius), text, HORIZONTAL_ALIGNMENT_RIGHT, Color.ORANGE, Color.BLACK, LabelAlignment.Bottom)
