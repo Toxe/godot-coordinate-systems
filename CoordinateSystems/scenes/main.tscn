@@ -20,11 +20,101 @@ viewport_path = NodePath("SubViewport3")
 
 [node name="Main" type="Node2D" unique_id=8235168]
 
-[node name="Background" type="TextureRect" parent="." unique_id=396497303]
+[node name="Background and Labels" type="Node2D" parent="." unique_id=79359049]
+
+[node name="Background" type="TextureRect" parent="Background and Labels" unique_id=396497303]
 offset_right = 1600.0
 offset_bottom = 900.0
 texture = SubResource("GradientTexture2D_o5qli")
 script = ExtResource("1_sugp2")
+
+[node name="Label1" type="Label" parent="Background and Labels" unique_id=113031044]
+offset_left = 932.0
+offset_top = 10.0
+offset_right = 1158.0
+offset_bottom = 84.0
+text = "SubViewportContainer: 400×320
+- Stretch/Shrink: 4
+- SubViewport: 100×80"
+
+[node name="Label2" type="Label" parent="Background and Labels" unique_id=161700426]
+offset_left = 1369.0
+offset_top = 8.0
+offset_right = 1595.0
+offset_bottom = 82.0
+text = "SubViewportContainer: 200×160
+- Scale 2×2
+- SubViewport: 200×160"
+
+[node name="Label3" type="Label" parent="Background and Labels" unique_id=1411215777]
+offset_left = 1194.0
+offset_top = 535.0
+offset_right = 1343.0
+offset_bottom = 563.0
+text = "TextureRect: 200×200"
+
+[node name="Label4" type="Label" parent="Background and Labels" unique_id=1507417622]
+offset_left = 1427.0
+offset_top = 492.0
+offset_right = 1576.0
+offset_bottom = 566.0
+text = "TextureRect: 200×200
+- Rotation 90°
+- H Flip"
+
+[node name="Label5" type="Label" parent="Background and Labels" unique_id=1226042659]
+offset_left = 1015.0
+offset_top = 797.0
+offset_right = 1164.0
+offset_bottom = 894.0
+text = "TextureRect: 205×200
+- Scale 2×0.5
+- H Flip
+- V Flip"
+
+[node name="Label6" type="Label" parent="Background and Labels" unique_id=426603918]
+offset_left = 39.0
+offset_top = 58.0
+offset_right = 214.0
+offset_bottom = 103.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Simple Controls"
+
+[node name="Label7" type="Label" parent="Background and Labels" unique_id=1381013410]
+offset_left = 554.0
+offset_top = 1.0
+offset_right = 817.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "SubViewports in
+SubViewportContainers"
+
+[node name="Label8" type="Label" parent="Background and Labels" unique_id=570167275]
+offset_left = 779.0
+offset_top = 546.0
+offset_right = 1154.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "A single 200×200 SubViewport
+rendered in multiple TextureRects"
+
+[node name="Label9" type="Label" parent="Background and Labels" unique_id=1677060448]
+offset_left = 788.0
+offset_top = 669.0
+offset_right = 937.0
+offset_bottom = 743.0
+text = "TextureRect: 200×200
+- Scale 0.5×0.5
+- Rotation 45°"
+
+[node name="Line2D" type="Line2D" parent="Background and Labels" unique_id=649153884]
+points = PackedVector2Array(430, 0, 700, 470, 700, 900, 700, 470, 1600, 470)
+default_color = Color(0, 0, 0, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="Blackboard1" parent="." unique_id=2027896682 instance=ExtResource("2_0wfyh")]
 offset_left = 35.0
@@ -170,91 +260,3 @@ mouse_filter = 0
 texture = SubResource("ViewportTexture_sugp2")
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
-
-[node name="Label1" type="Label" parent="." unique_id=113031044]
-offset_left = 932.0
-offset_top = 10.0
-offset_right = 1158.0
-offset_bottom = 84.0
-text = "SubViewportContainer: 400×320
-- Stretch/Shrink: 4
-- SubViewport: 100×80"
-
-[node name="Label2" type="Label" parent="." unique_id=161700426]
-offset_left = 1369.0
-offset_top = 8.0
-offset_right = 1595.0
-offset_bottom = 82.0
-text = "SubViewportContainer: 200×160
-- Scale 2×2
-- SubViewport: 200×160"
-
-[node name="Label3" type="Label" parent="." unique_id=1411215777]
-offset_left = 1194.0
-offset_top = 535.0
-offset_right = 1343.0
-offset_bottom = 563.0
-text = "TextureRect: 200×200"
-
-[node name="Label4" type="Label" parent="." unique_id=1507417622]
-offset_left = 1427.0
-offset_top = 492.0
-offset_right = 1576.0
-offset_bottom = 566.0
-text = "TextureRect: 200×200
-- Rotation 90°
-- H Flip"
-
-[node name="Label5" type="Label" parent="." unique_id=1226042659]
-offset_left = 1015.0
-offset_top = 797.0
-offset_right = 1164.0
-offset_bottom = 894.0
-text = "TextureRect: 205×200
-- Scale 2×0.5
-- H Flip
-- V Flip"
-
-[node name="Label6" type="Label" parent="." unique_id=426603918]
-offset_left = 39.0
-offset_top = 58.0
-offset_right = 214.0
-offset_bottom = 103.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "Simple Controls"
-
-[node name="Label7" type="Label" parent="." unique_id=1381013410]
-offset_left = 554.0
-offset_top = 1.0
-offset_right = 817.0
-offset_bottom = 86.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "SubViewports in
-SubViewportContainers"
-
-[node name="Label8" type="Label" parent="." unique_id=570167275]
-offset_left = 779.0
-offset_top = 546.0
-offset_right = 1154.0
-offset_bottom = 631.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "A single 200×200 SubViewport
-rendered in multiple TextureRects"
-
-[node name="Label9" type="Label" parent="." unique_id=1677060448]
-offset_left = 788.0
-offset_top = 669.0
-offset_right = 937.0
-offset_bottom = 743.0
-text = "TextureRect: 200×200
-- Scale 0.5×0.5
-- Rotation 45°"
-
-[node name="Line2D" type="Line2D" parent="." unique_id=649153884]
-points = PackedVector2Array(430, 0, 700, 470, 700, 900, 700, 470, 1600, 470)
-default_color = Color(0, 0, 0, 1)
-begin_cap_mode = 2
-end_cap_mode = 2
