@@ -36,11 +36,10 @@ func append_subviewport_info(line: String, sub_viewport: SubViewport, sub_viewpo
     line = append_to_line(line, "Canvas (%s)" % [sub_viewport.name], sub_viewport_canvas_coords)
 
     var sub_viewport_container: SubViewportContainer = sub_viewport.get_parent() as SubViewportContainer
-    if sub_viewport_container && sub_viewport_container.stretch:
+    if sub_viewport_container:
         # sub_viewport is inside a SubViewportContainer
-        sub_viewport_canvas_coords *= sub_viewport_container.stretch_shrink
-        line = append_to_line(line, sub_viewport_container.name, sub_viewport_canvas_coords)
-        line = append_viewport_and_canvas_info(line, sub_viewport_container, sub_viewport_canvas_coords)
+        if sub_viewport_container.stretch && sub_viewport_container.stretch_shrink > 1:
+            sub_viewport_canvas_coords *= sub_viewport_container.stretch_shrink
 
     return line
 
