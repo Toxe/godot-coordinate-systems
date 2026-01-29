@@ -14,45 +14,42 @@ func _draw() -> void:
         lines.clear()
 
 
-func _on_mouse_moved(control: Control, local_mouse_coords: Vector2) -> void:
-    var line := append_to_line("", control.name, local_mouse_coords)
-
-    var sub_viewport: SubViewport = control.get_viewport() as SubViewport
-    if sub_viewport:
-        # control is inside a SubViewport
-        var sub_viewport_canvas_coords := control.get_global_transform_with_canvas() * local_mouse_coords
-        line = append_subviewport_info(line, sub_viewport, sub_viewport_canvas_coords)
-
-    line = append_viewport_and_canvas_info(line, control, local_mouse_coords)
-    lines.append(line)
+func _on_mouse_moved(control: Control, local_control_coords: Vector2) -> void:
+    var output_parts := calculate_transformations(control, local_control_coords)
+    lines.append(" → ".join(output_parts))
     queue_redraw()
 
 
-func append_to_line(line: String, name_or_class: String, pos: Vector2) -> String:
-    return line + "%s%s: %s" % ["" if line == "" else " → ", name_or_class, Format.format_position(pos)]
+func calculate_transformations(control: Control, local_control_coords: Vector2) -> Array[String]:
+    var output_parts: Array[String]
+    output_parts.append(format_line_part(control.name, local_control_coords))
+
+    # Is the control inside a SubViewport?
+    var sub_viewport: SubViewport = control.get_viewport() as SubViewport
+    if sub_viewport:
+        var coords_on_sub_viewport_canvas := control.get_global_transform_with_canvas() * local_control_coords
+        output_parts.append(format_line_part("Canvas (%s)" % [sub_viewport.name], coords_on_sub_viewport_canvas))
+
+        # Is sub_viewport inside a SubViewportContainer?
+        var sub_viewport_container: SubViewportContainer = sub_viewport.get_parent() as SubViewportContainer
+        if sub_viewport_container:
+            var local_sub_viewport_container_coords := coords_on_sub_viewport_canvas
+            if sub_viewport_container.stretch && sub_viewport_container.stretch_shrink > 1:
+                local_sub_viewport_container_coords *= sub_viewport_container.stretch_shrink
+            # recurse down into the SubViewportContainer
+            output_parts.append_array(calculate_transformations(sub_viewport_container, local_sub_viewport_container_coords))
+    else:
+        # control is not inside a SubViewport, therefor it is (probably) inside the root Window (aka. the screen)
+        var viewport := control.get_viewport()
+        var coords_on_canvas := control.get_global_transform_with_canvas() * local_control_coords
+        output_parts.append(format_line_part("Canvas (%s)" % [viewport.get_class()], coords_on_canvas))
+
+        if viewport is Window:
+            var window_coords := control.get_viewport().get_screen_transform() * coords_on_canvas
+            output_parts.append(format_line_part("%s (%s)" % [viewport.get_class(), viewport.name], window_coords))
+
+    return output_parts
 
 
-func append_subviewport_info(line: String, sub_viewport: SubViewport, sub_viewport_canvas_coords: Vector2) -> String:
-    line = append_to_line(line, "Canvas (%s)" % [sub_viewport.name], sub_viewport_canvas_coords)
-
-    var sub_viewport_container: SubViewportContainer = sub_viewport.get_parent() as SubViewportContainer
-    if sub_viewport_container:
-        # sub_viewport is inside a SubViewportContainer
-        if sub_viewport_container.stretch && sub_viewport_container.stretch_shrink > 1:
-            sub_viewport_canvas_coords *= sub_viewport_container.stretch_shrink
-
-    return line
-
-
-func append_viewport_and_canvas_info(line: String, control: Control, local_control_coords: Vector2) -> String:
-    var viewport := control.get_viewport()
-    var canvas_coords := control.get_global_transform_with_canvas() * local_control_coords
-
-    if viewport is not SubViewport:
-        line = append_to_line(line, "Canvas (%s)" % [viewport.get_class()], canvas_coords)
-
-    if viewport is Window:
-        var window_coords := control.get_viewport().get_screen_transform() * canvas_coords
-        line = append_to_line(line, "%s (%s)" % [viewport.get_class(), viewport.name], window_coords)
-
-    return line
+func format_line_part(label: String, pos: Vector2) -> String:
+    return "%s: %s" % [label, Format.format_position(pos)]
