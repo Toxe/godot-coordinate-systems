@@ -7,21 +7,21 @@
 [ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/gui_input_forwarder.gd" id="4_jyhfs"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_sugp2"]
-viewport_path = NodePath("SubViewport3")
+viewport_path = NodePath("Single_Viewport_rendered_in_multiple_TextureRects/SubViewport3")
 
 [node name="Main" type="Node2D" unique_id=1034657618]
 script = ExtResource("1_tbgi4")
 
-[node name="Background and Labels" type="Node2D" parent="." unique_id=79359049]
+[node name="Background_and_Labels" type="Node2D" parent="." unique_id=79359049]
 
-[node name="Background" type="ColorRect" parent="Background and Labels" unique_id=206494142]
+[node name="Background" type="ColorRect" parent="Background_and_Labels" unique_id=206494142]
 offset_right = 1600.0
 offset_bottom = 900.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
-[node name="Label1" type="Label" parent="Background and Labels" unique_id=113031044]
+[node name="Label1" type="Label" parent="Background_and_Labels" unique_id=113031044]
 offset_left = 378.0
 offset_top = 371.0
 offset_right = 604.0
@@ -30,7 +30,7 @@ text = "SubViewportContainer: 400×300
 - Stretch/Shrink: 4
 - SubViewport: 100×75"
 
-[node name="Label2" type="Label" parent="Background and Labels" unique_id=161700426]
+[node name="Label2" type="Label" parent="Background_and_Labels" unique_id=161700426]
 offset_left = 783.0
 offset_top = 370.0
 offset_right = 1009.0
@@ -39,14 +39,14 @@ text = "SubViewportContainer: 200×150
 - Scale 2×2
 - SubViewport: 200×150"
 
-[node name="Label3" type="Label" parent="Background and Labels" unique_id=1411215777]
+[node name="Label3" type="Label" parent="Background_and_Labels" unique_id=1411215777]
 offset_left = 1194.0
 offset_top = 535.0
 offset_right = 1343.0
 offset_bottom = 563.0
 text = "TextureRect: 200×200"
 
-[node name="Label4" type="Label" parent="Background and Labels" unique_id=1507417622]
+[node name="Label4" type="Label" parent="Background_and_Labels" unique_id=1507417622]
 offset_left = 1427.0
 offset_top = 492.0
 offset_right = 1576.0
@@ -55,7 +55,7 @@ text = "TextureRect: 200×200
 - Rotation 90°
 - H Flip"
 
-[node name="Label5" type="Label" parent="Background and Labels" unique_id=1226042659]
+[node name="Label5" type="Label" parent="Background_and_Labels" unique_id=1226042659]
 offset_left = 1015.0
 offset_top = 797.0
 offset_right = 1164.0
@@ -65,7 +65,7 @@ text = "TextureRect: 205×200
 - H Flip
 - V Flip"
 
-[node name="Label6" type="Label" parent="Background and Labels" unique_id=426603918]
+[node name="Label6" type="Label" parent="Background_and_Labels" unique_id=426603918]
 offset_left = 35.0
 offset_top = 161.0
 offset_right = 210.0
@@ -74,7 +74,7 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Simple Controls"
 
-[node name="Label7" type="Label" parent="Background and Labels" unique_id=1381013410]
+[node name="Label7" type="Label" parent="Background_and_Labels" unique_id=1381013410]
 offset_left = 285.0
 offset_top = 6.0
 offset_right = 735.0
@@ -83,7 +83,7 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "SubViewports in SubViewportContainers"
 
-[node name="Label8" type="Label" parent="Background and Labels" unique_id=570167275]
+[node name="Label8" type="Label" parent="Background_and_Labels" unique_id=570167275]
 offset_left = 756.0
 offset_top = 517.0
 offset_right = 1131.0
@@ -93,7 +93,7 @@ theme_override_font_sizes/font_size = 32
 text = "A single 200×200 SubViewport
 rendered in multiple TextureRects"
 
-[node name="Label9" type="Label" parent="Background and Labels" unique_id=1677060448]
+[node name="Label9" type="Label" parent="Background_and_Labels" unique_id=1677060448]
 offset_left = 788.0
 offset_top = 669.0
 offset_right = 937.0
@@ -102,7 +102,7 @@ text = "TextureRect: 200×200
 - Scale 0.5×0.5
 - Rotation 45°"
 
-[node name="Label10" type="Label" parent="Background and Labels" unique_id=1670800869]
+[node name="Label10" type="Label" parent="Background_and_Labels" unique_id=1670800869]
 offset_left = 1222.0
 offset_top = 354.0
 offset_right = 1590.0
@@ -112,7 +112,7 @@ text = "3 stacked SubViewportContainers and SubViewports:
 - 2nd: 100×75, scale 2×2
 - 3rd: 100×75, rotation 15°"
 
-[node name="Label11" type="Label" parent="Background and Labels" unique_id=1981583802]
+[node name="Label11" type="Label" parent="Background_and_Labels" unique_id=1981583802]
 offset_left = 25.0
 offset_top = 20.0
 offset_right = 179.0
@@ -121,20 +121,27 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "F11: Toggle Fullscreen
 Esc: Quit"
 
-[node name="Line2D" type="Line2D" parent="Background and Labels" unique_id=649153884]
+[node name="Line2D" type="Line2D" parent="Background_and_Labels" unique_id=649153884]
 points = PackedVector2Array(250, 0, 350, 470, 700, 470, 700, 900, 700, 470, 1600, 470)
 default_color = Color(0.3, 0.3, 0.3, 1)
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="Blackboard1" parent="." unique_id=2027896682 instance=ExtResource("2_0wfyh")]
+[node name="MouseOverlayCanvasLayer" type="CanvasLayer" parent="." unique_id=1819731043]
+
+[node name="MouseOverlay" type="Node2D" parent="MouseOverlayCanvasLayer" unique_id=112223641]
+script = ExtResource("3_jyhfs")
+
+[node name="Simple_Controls" type="Node2D" parent="." unique_id=2006975493]
+
+[node name="Blackboard1" parent="Simple_Controls" unique_id=2027896682 instance=ExtResource("2_0wfyh")]
 offset_left = 43.0
 offset_top = 233.0
 offset_right = 243.0
 offset_bottom = 433.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Blackboard2" parent="." unique_id=1666201008 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard2" parent="Simple_Controls" unique_id=1666201008 instance=ExtResource("2_0wfyh")]
 offset_left = 19.0
 offset_top = 779.0
 offset_right = 219.0
@@ -142,7 +149,7 @@ offset_bottom = 979.0
 scale = Vector2(2, 0.5)
 metadata/_edit_use_anchors_ = true
 
-[node name="Blackboard3" parent="." unique_id=1031358396 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard3" parent="Simple_Controls" unique_id=1031358396 instance=ExtResource("2_0wfyh")]
 offset_left = 17.0
 offset_top = 758.0
 offset_right = 117.0
@@ -151,7 +158,7 @@ rotation = -1.5707964
 scale = Vector2(3, 3)
 metadata/_edit_use_anchors_ = true
 
-[node name="Blackboard4" parent="." unique_id=1278775097 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard4" parent="Simple_Controls" unique_id=1278775097 instance=ExtResource("2_0wfyh")]
 offset_left = 488.0
 offset_top = 536.0
 offset_right = 588.0
@@ -160,12 +167,9 @@ rotation = 0.7853982
 scale = Vector2(2, 0.5)
 metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1819731043]
+[node name="SubViewports_in_SubViewportContainers" type="Node2D" parent="." unique_id=1659394966]
 
-[node name="MouseOverlay" type="Node2D" parent="CanvasLayer" unique_id=112223641]
-script = ExtResource("3_jyhfs")
-
-[node name="SubViewportContainer1" type="SubViewportContainer" parent="." unique_id=451903663]
+[node name="SubViewportContainer1" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers" unique_id=451903663]
 offset_left = 369.0
 offset_top = 60.0
 offset_right = 769.0
@@ -174,13 +178,13 @@ stretch = true
 stretch_shrink = 4
 script = ExtResource("1_sugp2")
 
-[node name="SubViewport1" type="SubViewport" parent="SubViewportContainer1" unique_id=999090212]
+[node name="SubViewport1" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer1" unique_id=999090212]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(100, 75)
 render_target_update_mode = 4
 
-[node name="Blackboard5" parent="SubViewportContainer1/SubViewport1" unique_id=1828926156 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard5" parent="SubViewports_in_SubViewportContainers/SubViewportContainer1/SubViewport1" unique_id=1828926156 instance=ExtResource("2_0wfyh")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -190,7 +194,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="SubViewportContainer2" type="SubViewportContainer" parent="." unique_id=897523664]
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers" unique_id=897523664]
 offset_left = 783.0
 offset_top = 60.0
 offset_right = 983.0
@@ -199,13 +203,13 @@ scale = Vector2(2, 2)
 stretch = true
 script = ExtResource("1_sugp2")
 
-[node name="SubViewport2" type="SubViewport" parent="SubViewportContainer2" unique_id=1045096330]
+[node name="SubViewport2" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer2" unique_id=1045096330]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(200, 150)
 render_target_update_mode = 4
 
-[node name="Blackboard6" parent="SubViewportContainer2/SubViewport2" unique_id=272454242 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard6" parent="SubViewports_in_SubViewportContainers/SubViewportContainer2/SubViewport2" unique_id=272454242 instance=ExtResource("2_0wfyh")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -216,7 +220,7 @@ grow_vertical = 2
 scale = Vector2(2, 2)
 metadata/_edit_lock_ = true
 
-[node name="SubViewportContainer3A" type="SubViewportContainer" parent="." unique_id=536745075]
+[node name="SubViewportContainer3A" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers" unique_id=536745075]
 offset_left = 1194.0
 offset_top = 60.0
 offset_right = 1394.0
@@ -224,42 +228,42 @@ offset_bottom = 210.0
 scale = Vector2(2, 2)
 script = ExtResource("1_sugp2")
 
-[node name="SubViewport4A" type="SubViewport" parent="SubViewportContainer3A" unique_id=276867313]
+[node name="SubViewport4A" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A" unique_id=276867313]
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(200, 150)
 render_target_update_mode = 4
 
-[node name="SubViewportContainer3B" type="SubViewportContainer" parent="SubViewportContainer3A/SubViewport4A" unique_id=231376535]
+[node name="SubViewportContainer3B" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A" unique_id=231376535]
 offset_right = 100.0
 offset_bottom = 75.0
 scale = Vector2(2, 2)
 script = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
-[node name="SubViewport4B" type="SubViewport" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B" unique_id=784670405]
+[node name="SubViewport4B" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B" unique_id=784670405]
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(100, 75)
 render_target_update_mode = 4
 
-[node name="SubViewportContainer3C" type="SubViewportContainer" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B" unique_id=1459838181]
+[node name="SubViewportContainer3C" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B" unique_id=1459838181]
 offset_right = 100.0
 offset_bottom = 75.0
 rotation = -0.2617994
 script = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
-[node name="SubViewport4C" type="SubViewport" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C" unique_id=42215607]
+[node name="SubViewport4C" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C" unique_id=42215607]
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(100, 75)
 render_target_update_mode = 4
 
-[node name="Blackboard8" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C/SubViewport4C" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard8" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C/SubViewport4C" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -269,16 +273,18 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_lock_ = true
 
-[node name="SubViewport3" type="SubViewport" parent="." unique_id=118774271]
+[node name="Single_Viewport_rendered_in_multiple_TextureRects" type="Node2D" parent="." unique_id=1340474106]
+
+[node name="SubViewport3" type="SubViewport" parent="Single_Viewport_rendered_in_multiple_TextureRects" unique_id=118774271]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(200, 200)
 
-[node name="Blackboard7" parent="SubViewport3" unique_id=253954988 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard7" parent="Single_Viewport_rendered_in_multiple_TextureRects/SubViewport3" unique_id=253954988 instance=ExtResource("2_0wfyh")]
 offset_right = 200.0
 offset_bottom = 200.0
 
-[node name="TextureRect1" type="TextureRect" parent="." unique_id=767382591 node_paths=PackedStringArray("sub_viewport")]
+[node name="TextureRect1" type="TextureRect" parent="Single_Viewport_rendered_in_multiple_TextureRects" unique_id=767382591 node_paths=PackedStringArray("sub_viewport")]
 offset_left = 1170.0
 offset_top = 572.0
 offset_right = 1370.0
@@ -287,7 +293,7 @@ texture = SubResource("ViewportTexture_sugp2")
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1570498070 node_paths=PackedStringArray("sub_viewport")]
+[node name="TextureRect2" type="TextureRect" parent="Single_Viewport_rendered_in_multiple_TextureRects" unique_id=1570498070 node_paths=PackedStringArray("sub_viewport")]
 offset_left = 1580.0
 offset_top = 572.0
 offset_right = 1780.0
@@ -298,7 +304,7 @@ flip_h = true
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
-[node name="TextureRect3" type="TextureRect" parent="." unique_id=1538466976 node_paths=PackedStringArray("sub_viewport")]
+[node name="TextureRect3" type="TextureRect" parent="Single_Viewport_rendered_in_multiple_TextureRects" unique_id=1538466976 node_paths=PackedStringArray("sub_viewport")]
 offset_left = 1170.0
 offset_top = 782.0
 offset_right = 1375.0
@@ -310,7 +316,7 @@ flip_v = true
 script = ExtResource("4_jyhfs")
 sub_viewport = NodePath("../SubViewport3")
 
-[node name="TextureRect4" type="TextureRect" parent="." unique_id=513767253 node_paths=PackedStringArray("sub_viewport")]
+[node name="TextureRect4" type="TextureRect" parent="Single_Viewport_rendered_in_multiple_TextureRects" unique_id=513767253 node_paths=PackedStringArray("sub_viewport")]
 offset_left = 955.0
 offset_top = 682.0
 offset_right = 1155.0
