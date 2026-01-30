@@ -27,24 +27,25 @@ offset_right = 1600.0
 offset_bottom = 900.0
 texture = SubResource("GradientTexture2D_o5qli")
 script = ExtResource("1_sugp2")
+metadata/_edit_lock_ = true
 
 [node name="Label1" type="Label" parent="Background and Labels" unique_id=113031044]
-offset_left = 932.0
-offset_top = 10.0
-offset_right = 1158.0
-offset_bottom = 84.0
-text = "SubViewportContainer: 400×320
+offset_left = 378.0
+offset_top = 371.0
+offset_right = 604.0
+offset_bottom = 445.0
+text = "SubViewportContainer: 400×300
 - Stretch/Shrink: 4
-- SubViewport: 100×80"
+- SubViewport: 100×75"
 
 [node name="Label2" type="Label" parent="Background and Labels" unique_id=161700426]
-offset_left = 1369.0
-offset_top = 8.0
-offset_right = 1595.0
-offset_bottom = 82.0
-text = "SubViewportContainer: 200×160
+offset_left = 783.0
+offset_top = 370.0
+offset_right = 1009.0
+offset_bottom = 444.0
+text = "SubViewportContainer: 200×150
 - Scale 2×2
-- SubViewport: 200×160"
+- SubViewport: 200×150"
 
 [node name="Label3" type="Label" parent="Background and Labels" unique_id=1411215777]
 offset_left = 1194.0
@@ -73,29 +74,28 @@ text = "TextureRect: 205×200
 - V Flip"
 
 [node name="Label6" type="Label" parent="Background and Labels" unique_id=426603918]
-offset_left = 39.0
-offset_top = 58.0
-offset_right = 214.0
-offset_bottom = 103.0
+offset_left = 40.0
+offset_top = 133.0
+offset_right = 215.0
+offset_bottom = 178.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Simple Controls"
 
 [node name="Label7" type="Label" parent="Background and Labels" unique_id=1381013410]
-offset_left = 554.0
-offset_top = 1.0
-offset_right = 817.0
-offset_bottom = 86.0
+offset_left = 285.0
+offset_top = 6.0
+offset_right = 735.0
+offset_bottom = 51.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "SubViewports in
-SubViewportContainers"
+text = "SubViewports in SubViewportContainers"
 
 [node name="Label8" type="Label" parent="Background and Labels" unique_id=570167275]
-offset_left = 779.0
-offset_top = 546.0
-offset_right = 1154.0
-offset_bottom = 631.0
+offset_left = 756.0
+offset_top = 517.0
+offset_right = 1131.0
+offset_bottom = 602.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "A single 200×200 SubViewport
@@ -110,42 +110,52 @@ text = "TextureRect: 200×200
 - Scale 0.5×0.5
 - Rotation 45°"
 
+[node name="Label10" type="Label" parent="Background and Labels" unique_id=1670800869]
+offset_left = 1222.0
+offset_top = 354.0
+offset_right = 1590.0
+offset_bottom = 451.0
+text = "3 stacked SubViewportContainers and SubViewports:
+- 1st: 200×150, scale 2×2
+- 2nd: 100×75, scale 2×2
+- 3rd: 100×75, rotation 15°"
+
 [node name="Line2D" type="Line2D" parent="Background and Labels" unique_id=649153884]
-points = PackedVector2Array(430, 0, 700, 470, 700, 900, 700, 470, 1600, 470)
+points = PackedVector2Array(250, 0, 350, 470, 700, 470, 700, 900, 700, 470, 1600, 470)
 default_color = Color(0, 0, 0, 1)
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Blackboard1" parent="." unique_id=2027896682 instance=ExtResource("2_0wfyh")]
-offset_left = 35.0
-offset_top = 142.4213
-offset_right = 235.0
-offset_bottom = 342.4213
+offset_left = 43.0
+offset_top = 233.0
+offset_right = 243.0
+offset_bottom = 433.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Blackboard2" parent="." unique_id=1666201008 instance=ExtResource("2_0wfyh")]
-offset_left = 36.0
-offset_top = 720.42126
-offset_right = 236.0
-offset_bottom = 920.42126
+offset_left = 19.0
+offset_top = 779.0
+offset_right = 219.0
+offset_bottom = 979.0
 scale = Vector2(2, 0.5)
 metadata/_edit_use_anchors_ = true
 
 [node name="Blackboard3" parent="." unique_id=1031358396 instance=ExtResource("2_0wfyh")]
-offset_left = 51.000004
-offset_top = 688.42126
-offset_right = 151.0
-offset_bottom = 788.42126
+offset_left = 17.0
+offset_top = 758.0
+offset_right = 117.0
+offset_bottom = 858.0
 rotation = -1.5707964
 scale = Vector2(3, 3)
 metadata/_edit_use_anchors_ = true
 
 [node name="Blackboard4" parent="." unique_id=1278775097 instance=ExtResource("2_0wfyh")]
-offset_left = 250.0
-offset_top = 258.0
-offset_right = 350.0
-offset_bottom = 658.0
-rotation = -0.7853982
+offset_left = 488.0
+offset_top = 536.0
+offset_right = 588.0
+offset_bottom = 935.99994
+rotation = 0.7853982
 scale = Vector2(2, 0.5)
 metadata/_edit_use_anchors_ = true
 
@@ -155,10 +165,10 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("3_jyhfs")
 
 [node name="SubViewportContainer1" type="SubViewportContainer" parent="." unique_id=451903663]
-offset_left = 757.0
-offset_top = 84.0
-offset_right = 1157.0
-offset_bottom = 404.0
+offset_left = 369.0
+offset_top = 60.0
+offset_right = 769.0
+offset_bottom = 360.0
 stretch = true
 stretch_shrink = 4
 script = ExtResource("1_sugp2")
@@ -166,7 +176,7 @@ script = ExtResource("1_sugp2")
 [node name="SubViewport1" type="SubViewport" parent="SubViewportContainer1" unique_id=999090212]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
-size = Vector2i(100, 80)
+size = Vector2i(100, 75)
 render_target_update_mode = 4
 
 [node name="Blackboard5" parent="SubViewportContainer1/SubViewport1" unique_id=1828926156 instance=ExtResource("2_0wfyh")]
@@ -180,10 +190,10 @@ grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="." unique_id=897523664]
-offset_left = 1185.0
-offset_top = 84.0
-offset_right = 1385.0
-offset_bottom = 244.0
+offset_left = 783.0
+offset_top = 60.0
+offset_right = 983.0
+offset_bottom = 210.0
 scale = Vector2(2, 2)
 stretch = true
 script = ExtResource("1_sugp2")
@@ -191,7 +201,7 @@ script = ExtResource("1_sugp2")
 [node name="SubViewport2" type="SubViewport" parent="SubViewportContainer2" unique_id=1045096330]
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
-size = Vector2i(200, 160)
+size = Vector2i(200, 150)
 render_target_update_mode = 4
 
 [node name="Blackboard6" parent="SubViewportContainer2/SubViewport2" unique_id=272454242 instance=ExtResource("2_0wfyh")]
@@ -199,10 +209,63 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -100.0
-offset_bottom = -80.0
+offset_bottom = -75.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+metadata/_edit_lock_ = true
+
+[node name="SubViewportContainer3A" type="SubViewportContainer" parent="." unique_id=536745075]
+offset_left = 1194.0
+offset_top = 60.0
+offset_right = 1394.0
+offset_bottom = 210.0
+scale = Vector2(2, 2)
+script = ExtResource("1_sugp2")
+
+[node name="SubViewport4A" type="SubViewport" parent="SubViewportContainer3A" unique_id=276867313]
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(200, 150)
+render_target_update_mode = 4
+
+[node name="SubViewportContainer3B" type="SubViewportContainer" parent="SubViewportContainer3A/SubViewport4A" unique_id=231376535]
+offset_right = 100.0
+offset_bottom = 75.0
+scale = Vector2(2, 2)
+script = ExtResource("1_sugp2")
+metadata/_edit_lock_ = true
+
+[node name="SubViewport4B" type="SubViewport" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B" unique_id=784670405]
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(100, 75)
+render_target_update_mode = 4
+
+[node name="SubViewportContainer3C" type="SubViewportContainer" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B" unique_id=1459838181]
+offset_right = 100.0
+offset_bottom = 75.0
+rotation = -0.2617994
+script = ExtResource("1_sugp2")
+metadata/_edit_lock_ = true
+
+[node name="SubViewport4C" type="SubViewport" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C" unique_id=42215607]
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(100, 75)
+render_target_update_mode = 4
+
+[node name="Blackboard8" parent="SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C/SubViewport4C" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_lock_ = true
 
 [node name="SubViewport3" type="SubViewport" parent="." unique_id=118774271]
