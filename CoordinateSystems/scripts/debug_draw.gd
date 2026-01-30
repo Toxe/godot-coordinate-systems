@@ -29,4 +29,4 @@ static func draw_label(canvas_item: CanvasItem, pos: Vector2, text: String, text
 
 static func draw_labeled_circle(canvas_item: CanvasItem, pos: Vector2, radius: float, color: Color, width: float, text: String) -> void:
     canvas_item.draw_circle(pos, radius, color, false, width)
-    draw_label(canvas_item, pos + Vector2(0, radius), text, Color.ORANGE, Color.BLACK)
+    draw_label(canvas_item, pos + Vector2(0, radius), text, Color.WHITE, Color.BLACK)

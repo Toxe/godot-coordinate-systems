@@ -5,16 +5,6 @@
 [ext_resource type="Script" uid="uid://c0e04nsduwy4q" path="res://scenes/mouse_overlay.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/gui_input_forwarder.gd" id="4_jyhfs"]
 
-[sub_resource type="Gradient" id="Gradient_sgp6g"]
-colors = PackedColorArray(0.61610734, 0.6690598, 1, 1, 0.9999996, 0.83634895, 0.46008295, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_o5qli"]
-gradient = SubResource("Gradient_sgp6g")
-width = 128
-height = 128
-fill_to = Vector2(1, 1)
-metadata/_snap_enabled = true
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_sugp2"]
 viewport_path = NodePath("SubViewport3")
 
@@ -22,10 +12,10 @@ viewport_path = NodePath("SubViewport3")
 
 [node name="Background and Labels" type="Node2D" parent="." unique_id=79359049]
 
-[node name="Background" type="TextureRect" parent="Background and Labels" unique_id=396497303]
+[node name="Background" type="ColorRect" parent="Background and Labels" unique_id=206494142]
 offset_right = 1600.0
 offset_bottom = 900.0
-texture = SubResource("GradientTexture2D_o5qli")
+color = Color(0, 0, 0, 1)
 script = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
@@ -122,7 +112,7 @@ text = "3 stacked SubViewportContainers and SubViewports:
 
 [node name="Line2D" type="Line2D" parent="Background and Labels" unique_id=649153884]
 points = PackedVector2Array(250, 0, 350, 470, 700, 470, 700, 900, 700, 470, 1600, 470)
-default_color = Color(0, 0, 0, 1)
+default_color = Color(0.3, 0.3, 0.3, 1)
 begin_cap_mode = 2
 end_cap_mode = 2
 
