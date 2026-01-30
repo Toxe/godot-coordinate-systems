@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3aw8x0686vsw"]
 
 [ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scenes/gui_mouse_listener.gd" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://cstrdq3aumxkh" path="res://scenes/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://c4acg3uptu08i" path="res://scenes/blackboard.tscn" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://c0e04nsduwy4q" path="res://scenes/mouse_overlay.gd" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://mpf8obcsjya7" path="res://scenes/gui_input_forwarder.gd" id="4_jyhfs"]
@@ -8,7 +9,8 @@
 [sub_resource type="ViewportTexture" id="ViewportTexture_sugp2"]
 viewport_path = NodePath("SubViewport3")
 
-[node name="Main" type="Node2D" unique_id=8235168]
+[node name="Main" type="Node2D" unique_id=1034657618]
+script = ExtResource("1_tbgi4")
 
 [node name="Background and Labels" type="Node2D" parent="." unique_id=79359049]
 
@@ -64,10 +66,10 @@ text = "TextureRect: 205×200
 - V Flip"
 
 [node name="Label6" type="Label" parent="Background and Labels" unique_id=426603918]
-offset_left = 40.0
-offset_top = 133.0
-offset_right = 215.0
-offset_bottom = 178.0
+offset_left = 35.0
+offset_top = 161.0
+offset_right = 210.0
+offset_bottom = 206.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "Simple Controls"
@@ -109,6 +111,15 @@ text = "3 stacked SubViewportContainers and SubViewports:
 - 1st: 200×150, scale 2×2
 - 2nd: 100×75, scale 2×2
 - 3rd: 100×75, rotation 15°"
+
+[node name="Label11" type="Label" parent="Background and Labels" unique_id=1981583802]
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 179.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "F11: Toggle Fullscreen
+Esc: Quit"
 
 [node name="Line2D" type="Line2D" parent="Background and Labels" unique_id=649153884]
 points = PackedVector2Array(250, 0, 350, 470, 700, 470, 700, 900, 700, 470, 1600, 470)
