@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4acg3uptu08i"]
 
 [ext_resource type="Script" uid="uid://1jsw301ecqdb" path="res://scenes/blackboard.gd" id="1_i3d2x"]
+[ext_resource type="Script" uid="uid://ch8ltww7obcng" path="res://scenes/gui_mouse_listener.gd" id="2_7nlrx"]
 [ext_resource type="Texture2D" uid="uid://t5221ljt70h8" path="res://assets/images/thumb_up.png" id="2_wbyqp"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7nlrx"]
@@ -65,7 +66,9 @@ offset_top = 7.0
 offset_right = -2.0
 offset_bottom = 38.0
 grow_horizontal = 0
+mouse_filter = 1
 text = "click"
+script = ExtResource("2_7nlrx")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Button" unique_id=288607050]
 position = Vector2(16, 16)
@@ -85,8 +88,10 @@ offset_top = 40.0
 offset_right = -2.0
 offset_bottom = 71.0
 grow_horizontal = 0
+mouse_filter = 1
 placeholder_text = "type"
 expand_to_text_length = true
+script = ExtResource("2_7nlrx")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
