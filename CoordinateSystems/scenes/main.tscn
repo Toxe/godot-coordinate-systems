@@ -220,7 +220,7 @@ grow_vertical = 2
 scale = Vector2(2, 2)
 metadata/_edit_lock_ = true
 
-[node name="SubViewportContainer3A" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers" unique_id=536745075]
+[node name="SubVpContainerA" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers" unique_id=536745075]
 offset_left = 1194.0
 offset_top = 60.0
 offset_right = 1394.0
@@ -228,42 +228,42 @@ offset_bottom = 210.0
 scale = Vector2(2, 2)
 script = ExtResource("1_sugp2")
 
-[node name="SubViewport4A" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A" unique_id=276867313]
+[node name="SubVpA" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubVpContainerA" unique_id=276867313]
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(200, 150)
 render_target_update_mode = 4
 
-[node name="SubViewportContainer3B" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A" unique_id=231376535]
+[node name="SubVpContainerB" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers/SubVpContainerA/SubVpA" unique_id=231376535]
 offset_right = 100.0
 offset_bottom = 75.0
 scale = Vector2(2, 2)
 script = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
-[node name="SubViewport4B" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B" unique_id=784670405]
+[node name="SubVpB" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubVpContainerA/SubVpA/SubVpContainerB" unique_id=784670405]
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(100, 75)
 render_target_update_mode = 4
 
-[node name="SubViewportContainer3C" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B" unique_id=1459838181]
+[node name="SubVpContainerC" type="SubViewportContainer" parent="SubViewports_in_SubViewportContainers/SubVpContainerA/SubVpA/SubVpContainerB/SubVpB" unique_id=1459838181]
 offset_right = 100.0
 offset_bottom = 75.0
 rotation = -0.2617994
 script = ExtResource("1_sugp2")
 metadata/_edit_lock_ = true
 
-[node name="SubViewport4C" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C" unique_id=42215607]
+[node name="SubVpC" type="SubViewport" parent="SubViewports_in_SubViewportContainers/SubVpContainerA/SubVpA/SubVpContainerB/SubVpB/SubVpContainerC" unique_id=42215607]
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
 size = Vector2i(100, 75)
 render_target_update_mode = 4
 
-[node name="Blackboard8" parent="SubViewports_in_SubViewportContainers/SubViewportContainer3A/SubViewport4A/SubViewportContainer3B/SubViewport4B/SubViewportContainer3C/SubViewport4C" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
+[node name="Blackboard8" parent="SubViewports_in_SubViewportContainers/SubVpContainerA/SubVpA/SubVpContainerB/SubVpB/SubVpContainerC/SubVpC" unique_id=1287240771 instance=ExtResource("2_0wfyh")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
