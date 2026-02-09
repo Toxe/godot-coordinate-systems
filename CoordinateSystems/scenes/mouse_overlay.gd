@@ -10,7 +10,7 @@ func _ready() -> void:
 func _draw() -> void:
     if !lines.is_empty():
         var mouse_pos := get_viewport().get_mouse_position()
-        DebugDraw.draw_labeled_circle(self, mouse_pos, 10, Color.MAGENTA, 2, "\n".join(lines))
+        DebugDraw.draw_labeled_circle(self, mouse_pos, 10, Color.MAGENTA, 2, lines)
         lines.clear()
 
 
