@@ -46,10 +46,10 @@ func calculate_transformations(control: Control, local_control_coords: Vector2) 
 
         if viewport is Window:
             var window_coords := control.get_viewport().get_screen_transform() * coords_on_canvas
-            output_parts.append(format_line_part("%s (%s)" % [viewport.get_class(), viewport.name], window_coords))
+            output_parts.append(format_line_part("%s (%s)" % [viewport.get_class(), viewport.name], window_coords, true))
 
     return output_parts
 
 
-func format_line_part(label: String, pos: Vector2) -> String:
-    return "%s: %s" % [label, Format.format_position(pos)]
+func format_line_part(label: String, pos: Vector2, trim_trailing_zeros := false) -> String:
+    return "%s: %s" % [label, Format.format_position(pos, trim_trailing_zeros)]
