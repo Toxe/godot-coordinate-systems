@@ -14,3 +14,6 @@ default_font = SubResource("FontVariation_jm5n4")
 Label/colors/font_color = Color(0.5, 0.5, 0.5, 1)
 Label/constants/line_spacing = -5
 Label/font_sizes/font_size = 20
+TooltipLabel/colors/font_color = Color(0, 1, 1, 1)
+TooltipLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+TooltipLabel/constants/outline_size = 4
