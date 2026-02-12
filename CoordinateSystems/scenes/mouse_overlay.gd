@@ -45,7 +45,7 @@ func calculate_transformations(control: Control, local_control_coords: Vector2) 
         output_parts.append(format_line_part("Canvas (%s)" % [viewport.get_class()], coords_on_canvas))
 
         if viewport is Window:
-            var window_coords := control.get_viewport().get_screen_transform() * coords_on_canvas
+            var window_coords := viewport.get_screen_transform() * coords_on_canvas
             output_parts.append(format_line_part("%s (%s)" % [viewport.get_class(), viewport.name], window_coords, true))
 
     return output_parts
