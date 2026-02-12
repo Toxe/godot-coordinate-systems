@@ -39,7 +39,7 @@ func calculate_transformations(control: Control, local_control_coords: Vector2) 
             # recurse down into the SubViewportContainer
             output_parts.append_array(calculate_transformations(sub_viewport_container, local_sub_viewport_container_coords))
     else:
-        # control is not inside a SubViewport, therefor it is (probably) inside the root Window (aka. the screen)
+        # control is not inside a SubViewport, therefore it is (probably) inside the root Window (aka. the screen)
         var viewport := control.get_viewport()
         var coords_on_canvas := control.get_global_transform_with_canvas() * local_control_coords
         output_parts.append(format_line_part("Canvas (%s)" % [viewport.get_class()], coords_on_canvas))
