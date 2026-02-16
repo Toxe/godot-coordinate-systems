@@ -2,7 +2,9 @@
 
 A couple of examples on how to transform coordinates from one system into another. From local, lower nodes up the scene tree towards higher nodes, including SubViewports and the screen.
 
-<video controls src="media/video.mp4" title="Preview"></video>
+https://github.com/user-attachments/assets/9bf60690-862d-4cb0-b290-c5b7b0c7943f
+
+([view on Youtube](https://www.youtube.com/watch?v=84A9ChaZzd8) if the video doesn't play)
 
 ## "What are we doing? Is this difficult?"
 
