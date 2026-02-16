@@ -1,4 +1,4 @@
-# Godot Coordinate System Transformation Examples
+# Godot Coordinate System Transformations
 
 A couple of examples on how to transform coordinates from one system into another. From local, lower nodes up the scene tree towards higher nodes, including SubViewports and the screen.
 
@@ -37,7 +37,7 @@ Hover over an info label to get a tooltip for better readability:
 
 ## GUIMouseListener and "mouse_moved" Signals
 
-Most normal Controls who report mouse movement events extend from `GUIMouseListener` (`gui_mouse_listener.gd`). Once they receive an `InputEventMouseMotion` in `_gui_input()` they send a "mouse_moved" signal to report the mouse movement to the `MouseOverlay`:
+Most normal Controls who report mouse movement events extend from `GUIMouseListener` ([gui_mouse_listener.gd](CoordinateSystems/scenes/gui_mouse_listener.gd)). Once they receive an `InputEventMouseMotion` in `_gui_input()` they send a "mouse_moved" signal to report the mouse movement to the `MouseOverlay`:
 
 ```gdscript
 func _gui_input(event: InputEvent) -> void:
@@ -48,7 +48,7 @@ func _gui_input(event: InputEvent) -> void:
 
 ## MouseOverlay
 
-The `MouseOverlay` (`mouse_overlay.gd`) listens for "mouse_moved" signals. Once it receives a signal from a Control it transforms the local mouse position into coordinates of all the Viewports the Control is embedded in.
+The `MouseOverlay` ([mouse_overlay.gd](CoordinateSystems/scenes/mouse_overlay.gd)) listens for "mouse_moved" signals. Once it receives a signal from a Control it transforms the local mouse position into coordinates of all the Viewports the Control is embedded in.
 
 ## Transformations
 ### Simple Controls
